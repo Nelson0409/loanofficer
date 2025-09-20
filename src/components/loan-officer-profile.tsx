@@ -32,12 +32,12 @@ const LoanOfficerProfile = () => {
         </div>
       </CardHeader>
       <CardContent className="text-center pt-6">
-        <h2 className="text-3xl font-bold font-headline">Jane Doe</h2>
-        <p className="text-primary font-semibold">Senior Loan Officer</p>
-        <Badge variant="secondary" className="mt-2">NMLS #654321</Badge>
+        <h2 className="text-3xl font-bold font-headline">Nelson Liu</h2>
+        <p className="text-primary font-semibold">Loan Officer</p>
+        <Badge variant="secondary" className="mt-2">NMLS #2571046</Badge>
 
         <p className="text-muted-foreground mt-4 text-sm px-4">
-          With over 15 years of experience, Jane is dedicated to finding the perfect loan product for your unique needs, ensuring a smooth and transparent process from start to finish.
+        More than a loan officer, I am a partner in your financial journey. With every client, I provide personalized service, clear communication, and the expert guidance needed to make smart, confident financial decisions.
         </p>
 
         <Separator className="my-6" />
@@ -49,11 +49,11 @@ const LoanOfficerProfile = () => {
             </a>
             <a href="mailto:jane.doe@example.com" className="flex items-center gap-3 transition-colors hover:text-primary">
                 <Mail className="h-5 w-5 text-accent" />
-                <span>jane.doe@example.com</span>
+                <span>Ziheng.Liu@xpromortgage.com</span>
             </a>
             <div className="flex items-center gap-3">
                 <MapPin className="h-5 w-5 text-accent" />
-                <span>123 Finance St, Moneysville, USA</span>
+                <span>11900 NE 1st St,  #300 Bellevue, WA 98005</span>
             </div>
         </div>
       </CardContent>

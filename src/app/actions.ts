@@ -1,41 +1,41 @@
+
 "use server";
 
+import { analyzeLoanScenarioFlow, LoanScenarioAnalysis } from "@/ai/flows/analyze-loan-scenario-flow";
 import { z } from "zod";
-
-const contactFormSchema = z.object({
-  name: z.string().min(2, { message: "Name must be at least 2 characters." }),
-  email: z.string().email({ message: "Please enter a valid email address." }),
-  message: z.string().min(10, { message: "Message must be at least 10 characters." }),
-});
 
 export type FormState = {
   message: string;
   status: "success" | "error" | "idle";
+  analysis?: LoanScenarioAnalysis | null;
 };
 
-export async function submitContactForm(
-  prevState: FormState,
-  formData: FormData
-): Promise<FormState> {
-  const validatedFields = contactFormSchema.safeParse({
-    name: formData.get("name"),
-    email: formData.get("email"),
-    message: formData.get("message"),
-  });
+const loanScenarioSchema = z.string().min(20);
 
-  if (!validatedFields.success) {
+export async function analyzeLoanScenario(
+  scenario: string,
+): Promise<FormState> {
+  const validatedField = loanScenarioSchema.safeParse(scenario);
+
+  if (!validatedField.success) {
     return {
-      message: "There was an error with your submission.",
+      message: "Please describe your scenario in at least 20 characters.",
       status: "error",
     };
   }
 
-  // Here you would typically send an email, e.g., using Nodemailer, Resend, or another service.
-  // For this example, we'll just simulate a successful submission.
-  console.log("Form submitted successfully:", validatedFields.data);
-
-  return {
-    message: "Thank you for your message! We will get back to you shortly.",
-    status: "success",
-  };
+  try {
+    const analysis = await analyzeLoanScenarioFlow({ scenario: validatedField.data });
+    return {
+      message: "Analysis complete.",
+      status: "success",
+      analysis,
+    };
+  } catch (error) {
+    console.error(error);
+    return {
+      message: "An error occurred during analysis. Please try again.",
+      status: "error",
+    };
+  }
 }

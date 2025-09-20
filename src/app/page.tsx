@@ -27,8 +27,8 @@ export default function Home() {
       </main>
       <footer className="bg-secondary py-6">
         <div className="container mx-auto px-4 text-center text-muted-foreground text-sm">
-          <p>&copy; {new Date().getFullYear()} Your Company Name. All Rights Reserved.</p>
-          <p>NMLS #123456 | Equal Housing Lender</p>
+          <p>&copy; {new Date().getFullYear()} Xpro Mortgage Inc. All Rights Reserved.</p>
+          <p>NMLS #1033790 | Equal Housing Lender</p>
         </div>
       </footer>
     </div>
