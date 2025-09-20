@@ -1,3 +1,10 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "loan-officer-photo",
+      "description": "A professional headshot of the loan officer, Jane Doe.",
+      "imageUrl": "https://picsum.photos/seed/loanofficer/512/512",
+      "imageHint": "professional headshot"
+    }
+  ]
 }
