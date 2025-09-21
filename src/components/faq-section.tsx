@@ -55,7 +55,7 @@ const faqData = [
   {
     id: "closing",
     question: "What happens at closing?",
-    answer: "Closing, also known as settlement, is the final step in the home buying process. At the closing meeting, you will sign all the final loan and title documents, and pay your down payment and closing costs. Once everything is signed and the funds are transferred, the property's title is transferred to you, and you officially become the homeowner. You'll receive the keys to your new home at this time."
+    answer: "At the closing, ownership of the newly purchased home is officially transferred from the seller to you. It may involve you, the seller, the real estate agent, your attorney, the lender’s attorney, representatives from the title or escrow firm, and a variety of clerks, secretaries, and other staff. It is possible to have an attorney act on your behalf if you cannot attend the meeting (for example, if the house is in another state). Closing can take as little time as an hour to sign all the forms and transfer ownership or it can take several hours, depending on the contingency clauses in the purchase offer (and any escrow accounts that may need to be set up).\n\nMuch of the paperwork involved in closing (or settlement) is done by attorneys and real estate professionals. You may be involved in some of the closing activities and not in others, depending on local customs and on the professionals with whom you are working.\n\nBefore you close on the house, you should have a final inspection, or walk-through, to make sure any repairs you requested have been made and that items which were to remain with the house (drapes, light fixtures) are still there.\n\nIn most states, settlement is done by a title or escrow firm to which you forward all the materials and information along with the appropriate cashiers’ checks, and the firm will make the necessary disbursements. The real estate agent or another representative of the title company will deliver the check to the seller and the house keys to you."
   }
 ];
 
@@ -77,7 +77,7 @@ const FaqSection = () => {
                 <span>{faq.question}</span>
               </div>
             </AccordionTrigger>
-            <AccordionContent className="p-6 pt-0 text-muted-foreground">
+            <AccordionContent className="p-6 pt-0 text-muted-foreground whitespace-pre-line">
               <p>{faq.answer}</p>
             </AccordionContent>
           </AccordionItem>
