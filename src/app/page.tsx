@@ -2,6 +2,7 @@ import LoanOfficerProfile from '@/components/loan-officer-profile';
 import ContactForm from '@/components/contact-form';
 import LoanProducts from '@/components/loan-products';
 import { Separator } from '@/components/ui/separator';
+import MortgageCalculator from '@/components/mortgage-calculator';
 
 export default function Home() {
   return (
@@ -22,6 +23,8 @@ export default function Home() {
             <ContactForm />
           </div>
         </div>
+        <Separator className="my-12 lg:my-16" />
+        <MortgageCalculator />
         <Separator className="my-12 lg:my-16" />
         <LoanProducts />
       </main>
