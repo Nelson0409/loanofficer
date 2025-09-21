@@ -12,7 +12,7 @@ const LoanOfficerProfile = () => {
       <CardHeader className="p-0">
         <div className="relative h-48 w-full">
             <Image
-            src="/nelson-liu.jpg"
+            src="https://picsum.photos/seed/building/600/400"
             alt="Office building"
             data-ai-hint="office building"
             fill
