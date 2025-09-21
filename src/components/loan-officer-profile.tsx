@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Badge } from '@/components/ui/badge';
@@ -7,27 +6,24 @@ import { Phone, Mail, MapPin } from 'lucide-react';
 import { Separator } from './ui/separator';
 
 const LoanOfficerProfile = () => {
-  const officerImage = PlaceHolderImages.find(p => p.id === 'loan-officer-photo');
 
   return (
     <Card className="overflow-hidden shadow-lg sticky top-8">
       <CardHeader className="p-0">
         <div className="relative h-48 w-full">
-            {officerImage && (
-                <Image
-                src={officerImage.imageUrl}
-                alt="Office building"
-                data-ai-hint="office building"
-                fill
-                className="object-cover"
-                />
-            )}
+            <Image
+            src="/nelson-liu.jpg"
+            alt="Office building"
+            data-ai-hint="office building"
+            fill
+            className="object-cover"
+            />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
         </div>
         <div className="relative -mt-16 flex justify-center">
             <Avatar className="h-32 w-32 border-4 border-background shadow-md">
-            {officerImage && <AvatarImage src={officerImage.imageUrl} alt="Jane Doe" data-ai-hint={officerImage.imageHint} />}
-            <AvatarFallback>JD</AvatarFallback>
+            <AvatarImage src="/nelson-liu.jpg" alt="A professional headshot of Nelson Liu, a loan officer." />
+            <AvatarFallback>NL</AvatarFallback>
             </Avatar>
         </div>
       </CardHeader>
