@@ -15,9 +15,9 @@ Hello Nelson,
 
 I'm interested in learning more about my home financing options. Here is my situation:
 
-- **Loan Purpose:** (e.g., First-time home purchase, Refinancing, Investment property)
+- **Loan Purpose:** (e.g., Home purchase, Refinancing, Investment property)
 - **Property Location:** (e.g., City, State, or neighborhood)
-- **Estimated Price/Value:** (e.g., Approx. $500,000)
+- **Estimated Property Price/Value:** (e.g., Approx. $500,000)
 - **Down Payment:** (e.g., 10%, or a specific dollar amount)
 - **Credit Score:** (e.g., Excellent, Good, Fair, or a specific score if known)
 - **Employment Status:** (e.g., Employed, Self-employed)

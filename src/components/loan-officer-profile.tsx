@@ -43,11 +43,7 @@ const LoanOfficerProfile = () => {
         <Separator className="my-6" />
 
         <div className="text-left space-y-4 text-sm">
-            <a href="tel:123-456-7890" className="flex items-center gap-3 transition-colors hover:text-primary">
-                <Phone className="h-5 w-5 text-accent" />
-                <span>(123) 456-7890</span>
-            </a>
-            <a href="mailto:jane.doe@example.com" className="flex items-center gap-3 transition-colors hover:text-primary">
+            <a href="mailto:Ziheng.Liu@xpromortgage.com" className="flex items-center gap-3 transition-colors hover:text-primary">
                 <Mail className="h-5 w-5 text-accent" />
                 <span>Ziheng.Liu@xpromortgage.com</span>
             </a>
