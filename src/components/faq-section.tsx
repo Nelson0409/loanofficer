@@ -21,6 +21,36 @@ const faqData = [
     id: "escrow",
     question: "What is an escrow account?",
     answer: "An escrow account is an account managed by your mortgage lender to pay for your property taxes and homeowners' insurance. A portion of your monthly mortgage payment is deposited into this account. When your tax and insurance bills are due, the lender pays them on your behalf from the escrow account. This ensures these important bills are paid on time and protects both you and the lender."
+  },
+  {
+    id: "appraisal",
+    question: "What is an Appraisal?",
+    answer: "An appraisal is a professional, unbiased estimate of a property's market value. Lenders require an appraisal before approving a mortgage to ensure that the loan amount is not more than what the property is worth. An independent appraiser assesses the home's condition, size, features, and compares it to similar properties that have recently sold in the area."
+  },
+  {
+    id: "title",
+    question: "What is Title?",
+    answer: "Title is a legal concept that represents ownership of a property. When you buy a home, the title is transferred to you, giving you the legal right to use and possess the property. Title insurance is purchased to protect the owner and lender from any future claims or disputes over ownership."
+  },
+  {
+    id: "rate-lock",
+    question: "What does it mean to lock the interest rate?",
+    answer: "Locking your interest rate means securing a specific rate with your lender for a set period, typically 30 to 60 days. This protects you from potential increases in interest rates while your loan is being processed. If market rates go up during this period, your locked rate remains the same."
+  },
+  {
+    id: "apr",
+    question: "What is an APR?",
+    answer: "The Annual Percentage Rate (APR) is the total cost of borrowing money expressed as a yearly rate. It includes not only the interest rate but also other fees associated with the loan, such as lender fees, closing costs, and mortgage insurance. The APR gives you a more complete picture of the loan's cost than the interest rate alone."
+  },
+  {
+    id: "points",
+    question: "What are points?",
+    answer: "Mortgage points, also known as discount points, are fees paid directly to the lender at closing in exchange for a lower interest rate. One point costs 1% of your mortgage amount. Paying for points can be a good option if you plan to stay in your home for a long time, as the long-term interest savings can outweigh the upfront cost."
+  },
+  {
+    id: "refinance",
+    question: "When should I refinance?",
+    answer: "Refinancing might be a good idea if you can get a lower interest rate than your current one, which could reduce your monthly payments and total interest paid. Other reasons to refinance include switching from an adjustable-rate to a fixed-rate mortgage, shortening your loan term, or tapping into your home equity for large expenses."
   }
 ];
 
