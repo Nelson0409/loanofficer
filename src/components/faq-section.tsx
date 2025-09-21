@@ -51,6 +51,11 @@ const faqData = [
     id: "refinance",
     question: "When should I refinance?",
     answer: "Refinancing might be a good idea if you can get a lower interest rate than your current one, which could reduce your monthly payments and total interest paid. Other reasons to refinance include switching from an adjustable-rate to a fixed-rate mortgage, shortening your loan term, or tapping into your home equity for large expenses."
+  },
+  {
+    id: "closing",
+    question: "What happens at closing?",
+    answer: "Closing, also known as settlement, is the final step in the home buying process. At the closing meeting, you will sign all the final loan and title documents, and pay your down payment and closing costs. Once everything is signed and the funds are transferred, the property's title is transferred to you, and you officially become the homeowner. You'll receive the keys to your new home at this time."
   }
 ];
 
