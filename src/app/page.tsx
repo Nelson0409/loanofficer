@@ -1,6 +1,6 @@
 import LoanOfficerProfile from '@/components/loan-officer-profile';
 import ContactForm from '@/components/contact-form';
-import LoanProducts from '@/components/loan-products';
+import FaqSection from '@/components/faq-section';
 import { Separator } from '@/components/ui/separator';
 import MortgageCalculator from '@/components/mortgage-calculator';
 
@@ -26,7 +26,7 @@ export default function Home() {
         <Separator className="my-12 lg:my-16" />
         <MortgageCalculator />
         <Separator className="my-12 lg:my-16" />
-        <LoanProducts />
+        <FaqSection />
       </main>
       <footer className="bg-secondary py-6">
         <div className="container mx-auto px-4 text-center text-muted-foreground text-sm">
