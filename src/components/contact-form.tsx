@@ -60,7 +60,7 @@ Thank you,
         <Textarea 
           value={scenario}
           onChange={(e) => setScenario(e.target.value)}
-          className="min-h-[400px] text-sm bg-secondary/50"
+          className="min-h-[600px] text-sm bg-secondary/50"
         />
       </CardContent>
       <CardFooter className="flex flex-col sm:flex-row items-center gap-4">
