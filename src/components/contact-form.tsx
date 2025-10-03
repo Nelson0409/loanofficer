@@ -8,7 +8,7 @@ import { Mail, FileText } from "lucide-react";
 
 const LoanInquiryGuide = () => {
   const loanOfficerEmail = "Ziheng.Liu@xpromortgage.com";
-  const emailSubject = "Loan Inquiry";
+  const emailSubject = "Loan Inquiry(贷款咨询)";
 
   const emailTemplate = `
 Hello Nelson,
