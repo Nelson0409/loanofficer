@@ -7,14 +7,7 @@ import MortgageCalculator from '@/components/mortgage-calculator';
 export default function Home() {
   return (
     <div className="min-h-screen bg-background">
-      <header className="py-10">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl font-bold font-headline tracking-tight text-primary-foreground bg-primary py-4 px-8 rounded-lg shadow-md inline-block">
-            Your Trusted Partner in Home Financing
-          </h1>
-        </div>
-      </header>
-      <main className="container mx-auto px-4 pb-16">
+      <main className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 items-start">
           <div className="lg:col-span-1">
             <LoanOfficerProfile />
