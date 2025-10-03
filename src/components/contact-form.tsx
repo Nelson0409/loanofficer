@@ -18,10 +18,10 @@ I'm interested in learning more about my home financing options. Here is my situ
 - **Loan Purpose:** (e.g., Home purchase, Refinancing, Investment property)
 - **Zip Code:** (e.g., 98005)
 - **Estimated Property Price/Value:** (e.g., Approx. $500,000)
-- **Down Payment:** (e.g., 10%, or a specific dollar amount)
+- **Loan Amount:** (e.g., $400,000)
 - **Credit Score:** (e.g., Excellent, Good, Fair, or a specific score if known)
 - **Residency Status:** (e.g., Citizen, Permanent Resident Alien)
-- **Employment Status:** (e.g., Employed, Self-employed)
+- **Preferred Term:** (e.g., 30-year fixed, 15-year fixed)
 - **Additional Details:** (e.g., I'm a veteran, I have some questions about closing costs, etc.)
 
 
