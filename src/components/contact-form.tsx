@@ -50,10 +50,11 @@ Thank you,
       <CardHeader>
         <CardTitle className="font-headline text-3xl flex items-center gap-2">
           <FileText className="h-8 w-8 text-primary" />
-          Loan Inquiry Guide
+          Same Day Loan Quote 贷款咨询， 当天回复
         </CardTitle>
         <CardDescription>
-          Use the template below to structure your email. This will help me understand your needs and provide the best possible advice.
+          Use the template below to structure your email. This will help me understand your needs and provide the best possible advice
+          您可以用下面的邮件模板描述您的贷款需求， 以方便我更好的服务您
         </CardDescription>
       </CardHeader>
       <CardContent>
