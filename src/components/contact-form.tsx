@@ -13,19 +13,24 @@ const LoanInquiryGuide = () => {
   const emailTemplate = `
 Hello Nelson,
 
-I'm interested in learning more about my home financing options. Here is my situation:
+I'm interested in learning more about my home financing options. Please see my details below.
 
-- **Loan Purpose:** (e.g., Home purchase, Refinancing, Investment property)
-- **Zip Code:** (e.g., 98005)
-- **Estimated Property Price/Value:** (e.g., Approx. $500,000)
-- **Loan Amount:** (e.g., $400,000)
-- **Credit Score:** (e.g., Excellent, Good, Fair, or a specific score if known)
-- **Residency Status:** (e.g., Citizen, Permanent Resident Alien)
-- **Preferred Term:** (e.g., 30-year fixed, 15-year fixed)
-- **Additional Details:** (e.g., I'm a veteran, I have some questions about closing costs, etc.)
+**Loan & Property Details**
+*   **Loan Purpose:** (e.g., Home purchase, Refinancing)
+*   **Zip Code:** (e.g., 98005)
+*   **Estimated Property Value:** (e.g., $500,000)
+*   **Loan Amount:** (e.g., $400,000)
+*   **Preferred Term:** (e.g., 30-year fixed)
 
+**Personal Information**
+*   **Credit Score:** (e.g., Excellent, Good, Fair)
+*   **Residency Status:** (e.g., Citizen, Permanent Resident)
 
-I am available to talk on ________ at ________.
+**Additional Details**
+*   (e.g., I'm a first-time homebuyer, I have questions about VA loans, etc.)
+
+**Availability**
+*   I am available to talk on ________ at ________.
 
 Thank you,
 [Your Name]
