@@ -29,7 +29,7 @@ const LoanOfficerProfile = () => {
       </CardHeader>
       <CardContent className="text-center pt-6">
         <h2 className="text-3xl font-bold font-headline">Nelson Liu</h2>
-        <p className="text-primary font-semibold">Loan Officer</p>
+        <p className="text-primary font-semibold">Loan Officer - Xpro Mortgage</p>
         <Badge variant="secondary" className="mt-2">NMLS #2571046</Badge>
 
         <p className="text-muted-foreground mt-4 text-sm px-4">
@@ -39,6 +39,10 @@ const LoanOfficerProfile = () => {
         <Separator className="my-6" />
 
         <div className="text-left space-y-4 text-sm">
+            <a href="tel:425-728-4969" className="flex items-center gap-3 transition-colors hover:text-primary">
+                <Phone className="h-5 w-5 text-accent" />
+                <span>(425) 728-4969</span>
+            </a>
             <a href="mailto:Ziheng.Liu@xpromortgage.com" className="flex items-center gap-3 transition-colors hover:text-primary">
                 <Mail className="h-5 w-5 text-accent" />
                 <span>Ziheng.Liu@xpromortgage.com</span>
