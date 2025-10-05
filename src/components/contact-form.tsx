@@ -79,48 +79,61 @@ Thank you,
 
   return (
     <Card className="shadow-lg">
-      <CardHeader>
-        <CardTitle className="font-headline text-3xl flex items-center gap-2">
-          <FileText className="h-8 w-8 text-primary" />
-          Same Day Loan Quote / 贷款咨询，当天回复
-        </CardTitle>
-        <CardDescription>
-          Use the template below to structure your email. This will help me understand your needs and provide the best possible advice.
-          您可以用下面的邮件模板描述您的贷款需求，以便我更好地为您服务。
-        </CardDescription>
-      </CardHeader>
-      <CardContent>
-        <Tabs defaultValue="english" onValueChange={setActiveTab} className="w-full">
-          <TabsList className="grid w-full grid-cols-2">
-            <TabsTrigger value="english">English</TabsTrigger>
-            <TabsTrigger value="chinese">中文 (Chinese)</TabsTrigger>
-          </TabsList>
-          <TabsContent value="english">
-            <Textarea
-              value={englishScenario}
-              onChange={(e) => setEnglishScenario(e.target.value)}
-              className="min-h-[600px] text-sm bg-secondary/50 mt-4"
-              aria-label="English loan inquiry email template"
-            />
-          </TabsContent>
-          <TabsContent value="chinese">
-            <Textarea
-              value={chineseScenario}
-              onChange={(e) => setChineseScenario(e.target.value)}
-              className="min-h-[600px] text-sm bg-secondary/50 mt-4"
-              aria-label="Chinese loan inquiry email template"
-            />
-          </TabsContent>
-        </Tabs>
-      </CardContent>
-      <CardFooter className="flex flex-col sm:flex-row items-center gap-4">
-         <p className="text-xs text-muted-foreground flex-1 text-center sm:text-left">
-            Click the button to open the template for the selected language in your email client.
-        </p>
-        <Button onClick={handleEmailClick} className="w-full sm:w-auto bg-accent hover:bg-accent/90">
-            <Mail className="mr-2 h-4 w-4" /> Open in Email
-        </Button>
-      </CardFooter>
+      <Tabs defaultValue="english" onValueChange={setActiveTab} className="w-full">
+        <CardHeader>
+            <TabsList className="grid w-full grid-cols-2 mb-4">
+                <TabsTrigger value="english">English</TabsTrigger>
+                <TabsTrigger value="chinese">中文 (Chinese)</TabsTrigger>
+            </TabsList>
+            {activeTab === 'english' ? (
+                <>
+                    <CardTitle className="font-headline text-3xl flex items-center gap-2">
+                        <FileText className="h-8 w-8 text-primary" />
+                        Same Day Loan Quote
+                    </CardTitle>
+                    <CardDescription>
+                        Use the template below to structure your email. This will help me understand your needs and provide the best possible advice.
+                    </CardDescription>
+                </>
+            ) : (
+                <>
+                    <CardTitle className="font-headline text-3xl flex items-center gap-2">
+                        <FileText className="h-8 w-8 text-primary" />
+                        贷款咨询，当天回复
+                    </CardTitle>
+                    <CardDescription>
+                        您可以用下面的邮件模板描述您的贷款需求，以便我更好地为您服务。
+                    </CardDescription>
+                </>
+            )}
+        </CardHeader>
+        <CardContent>
+            <TabsContent value="english" className="mt-0">
+                <Textarea
+                value={englishScenario}
+                onChange={(e) => setEnglishScenario(e.target.value)}
+                className="min-h-[600px] text-sm bg-secondary/50"
+                aria-label="English loan inquiry email template"
+                />
+            </TabsContent>
+            <TabsContent value="chinese" className="mt-0">
+                <Textarea
+                value={chineseScenario}
+                onChange={(e) => setChineseScenario(e.target.value)}
+                className="min-h-[600px] text-sm bg-secondary/50"
+                aria-label="Chinese loan inquiry email template"
+                />
+            </TabsContent>
+        </CardContent>
+        <CardFooter className="flex flex-col sm:flex-row items-center gap-4">
+            <p className="text-xs text-muted-foreground flex-1 text-center sm:text-left">
+                Click the button to open the template for the selected language in your email client.
+            </p>
+            <Button onClick={handleEmailClick} className="w-full sm:w-auto bg-accent hover:bg-accent/90">
+                <Mail className="mr-2 h-4 w-4" /> Open in Email
+            </Button>
+        </CardFooter>
+      </Tabs>
     </Card>
   );
 };
