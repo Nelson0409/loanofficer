@@ -116,7 +116,7 @@ Thank you,
               aria-label="English loan inquiry email template"
               />
           </CardContent>
-          <CardFooter className="flex flex-col sm:flex-row items-center gap-4">
+          <CardFooter>
               <Button onClick={() => handleEmailClick('english')} className="w-full sm:w-auto bg-accent hover:bg-accent/90">
                   <Mail className="mr-2 h-4 w-4" /> Open Template in Email
               </Button>
@@ -131,7 +131,7 @@ Thank you,
               aria-label="Chinese loan inquiry email template"
               />
           </CardContent>
-          <CardFooter className="flex flex-col sm:flex-row items-center gap-4">
+          <CardFooter>
               <Button onClick={() => handleEmailClick('chinese')} className="w-full sm:w-auto bg-accent hover:bg-accent/90">
                   <Mail className="mr-2 h-4 w-4" /> 在邮件中打开
               </Button>
