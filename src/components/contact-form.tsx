@@ -70,8 +70,8 @@ Thank you,
   const [englishScenario, setEnglishScenario] = useState(emailTemplateEnglish);
   const [chineseScenario, setChineseScenario] = useState(emailTemplateChinese);
 
-  const handleEmailClick = () => {
-    const isChineseTab = activeTab === "chinese";
+  const handleEmailClick = (language: 'english' | 'chinese') => {
+    const isChineseTab = language === "chinese";
     const subject = isChineseTab ? "贷款咨询 (Loan Inquiry)" : "Loan Inquiry (贷款咨询)";
     const body = isChineseTab ? chineseScenario : englishScenario;
     window.location.href = `mailto:${loanOfficerEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
@@ -117,7 +117,7 @@ Thank you,
               />
           </CardContent>
           <CardFooter className="flex flex-col sm:flex-row items-center gap-4">
-              <Button onClick={handleEmailClick} className="w-full sm:w-auto bg-accent hover:bg-accent/90">
+              <Button onClick={() => handleEmailClick('english')} className="w-full sm:w-auto bg-accent hover:bg-accent/90">
                   <Mail className="mr-2 h-4 w-4" /> Open Template in Email
               </Button>
           </CardFooter>
@@ -132,7 +132,7 @@ Thank you,
               />
           </CardContent>
           <CardFooter className="flex flex-col sm:flex-row items-center gap-4">
-              <Button onClick={handleEmailClick} className="w-full sm:w-auto bg-accent hover:bg-accent/90">
+              <Button onClick={() => handleEmailClick('chinese')} className="w-full sm:w-auto bg-accent hover:bg-accent/90">
                   <Mail className="mr-2 h-4 w-4" /> 在邮件中打开
               </Button>
           </CardFooter>
