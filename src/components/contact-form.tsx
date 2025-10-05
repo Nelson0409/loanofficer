@@ -117,11 +117,8 @@ Thank you,
               />
           </CardContent>
           <CardFooter className="flex flex-col sm:flex-row items-center gap-4">
-              <p className="text-xs text-muted-foreground flex-1 text-center sm:text-left">
-                  Click the button to open the template for the selected language in your email client.
-              </p>
               <Button onClick={handleEmailClick} className="w-full sm:w-auto bg-accent hover:bg-accent/90">
-                  <Mail className="mr-2 h-4 w-4" /> Open in Email
+                  <Mail className="mr-2 h-4 w-4" /> Open Template in Email
               </Button>
           </CardFooter>
         </TabsContent>
@@ -135,9 +132,6 @@ Thank you,
               />
           </CardContent>
           <CardFooter className="flex flex-col sm:flex-row items-center gap-4">
-              <p className="text-xs text-muted-foreground flex-1 text-center sm:text-left">
-                  点击按钮，在您的邮件客户端中打开所选语言的模板。
-              </p>
               <Button onClick={handleEmailClick} className="w-full sm:w-auto bg-accent hover:bg-accent/90">
                   <Mail className="mr-2 h-4 w-4" /> 在邮件中打开
               </Button>
