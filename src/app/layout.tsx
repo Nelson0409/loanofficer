@@ -3,7 +3,7 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
-  title: 'Nelson Liu - Xpro Mortgage',
+  title: 'Nelson Liu, Loan Officer at Xpro Mortgage',
   description: 'Meet our expert loan officer and explore your financing options.',
 };
 
