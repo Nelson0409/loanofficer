@@ -43,23 +43,23 @@ Thank you,
 
 我想了解更多关于房屋贷款的信息，以下是我的基本情况。
 
-贷款和房产信息
--   贷款目的: (例如, 购房, 重新贷款)
--   邮政编码: (例如, 98005)
--   预估房价: (例如, $500,000)
--   房产类型: (例如, 独栋, 公寓)
--   房产用途: (例如, 自住, 度假屋, 投资)
--   贷款金额: (例如, $400,000)
--   期望贷款年限: (例如, 30年固定, 15年固定, ARM)
+贷款和房产信息 (Loan & Property Details)
+-   贷款目的 (Loan Purpose): (例如, 购房, 重新贷款)
+-   邮政编码 (Zip Code): (例如, 98005)
+-   预估房价 (Estimated Property Value): (例如, $500,000)
+-   房产类型 (Property Structure): (例如, 独栋, 公寓)
+-   房产用途 (Occupancy): (例如, 自住, 度假屋, 投资)
+-   贷款金额 (Loan Amount): (例如, $400,000)
+-   期望贷款年限 (Preferred Term): (例如, 30年固定, 15年固定, ARM)
 
-个人信息
--   信用分数: (例如, 优秀, 良好, 一般)
--   身份状态: (例如, 公民, 永久居民, 签证)
+个人信息 (Personal Information)
+-   信用分数 (Credit Score): (例如, 优秀, 良好, 一般)
+-   身份状态 (Residency Status): (例如, 公民, 永久居民, 签证)
 
-其他补充
+其他补充 (Additional Details)
 -   (例如, 我是首次购房者, 我对VA贷款有疑问, 等等)
 
-方便联系的时间
+方便联系的时间 (Availability)
 -   我方便在 ________ 的 ________ 与你联系。
 
 谢谢,
@@ -107,32 +107,42 @@ Thank you,
                 </>
             )}
         </CardHeader>
-        <CardContent>
-            <TabsContent value="english" className="mt-0">
-                <Textarea
-                value={englishScenario}
-                onChange={(e) => setEnglishScenario(e.target.value)}
-                className="min-h-[600px] text-sm bg-secondary/50"
-                aria-label="English loan inquiry email template"
-                />
-            </TabsContent>
-            <TabsContent value="chinese" className="mt-0">
-                <Textarea
-                value={chineseScenario}
-                onChange={(e) => setChineseScenario(e.target.value)}
-                className="min-h-[600px] text-sm bg-secondary/50"
-                aria-label="Chinese loan inquiry email template"
-                />
-            </TabsContent>
-        </CardContent>
-        <CardFooter className="flex flex-col sm:flex-row items-center gap-4">
-            <p className="text-xs text-muted-foreground flex-1 text-center sm:text-left">
-                Click the button to open the template for the selected language in your email client.
-            </p>
-            <Button onClick={handleEmailClick} className="w-full sm:w-auto bg-accent hover:bg-accent/90">
-                <Mail className="mr-2 h-4 w-4" /> Open in Email
-            </Button>
-        </CardFooter>
+        <TabsContent value="english" className="mt-0">
+          <CardContent>
+              <Textarea
+              value={englishScenario}
+              onChange={(e) => setEnglishScenario(e.target.value)}
+              className="min-h-[600px] text-sm bg-secondary/50"
+              aria-label="English loan inquiry email template"
+              />
+          </CardContent>
+          <CardFooter className="flex flex-col sm:flex-row items-center gap-4">
+              <p className="text-xs text-muted-foreground flex-1 text-center sm:text-left">
+                  Click the button to open the template for the selected language in your email client.
+              </p>
+              <Button onClick={handleEmailClick} className="w-full sm:w-auto bg-accent hover:bg-accent/90">
+                  <Mail className="mr-2 h-4 w-4" /> Open in Email
+              </Button>
+          </CardFooter>
+        </TabsContent>
+        <TabsContent value="chinese" className="mt-0">
+          <CardContent>
+              <Textarea
+              value={chineseScenario}
+              onChange={(e) => setChineseScenario(e.target.value)}
+              className="min-h-[600px] text-sm bg-secondary/50"
+              aria-label="Chinese loan inquiry email template"
+              />
+          </CardContent>
+          <CardFooter className="flex flex-col sm:flex-row items-center gap-4">
+              <p className="text-xs text-muted-foreground flex-1 text-center sm:text-left">
+                  点击按钮，在您的邮件客户端中打开所选语言的模板。
+              </p>
+              <Button onClick={handleEmailClick} className="w-full sm:w-auto bg-accent hover:bg-accent/90">
+                  <Mail className="mr-2 h-4 w-4" /> 在邮件中打开
+              </Button>
+          </CardFooter>
+        </TabsContent>
       </Tabs>
     </Card>
   );
