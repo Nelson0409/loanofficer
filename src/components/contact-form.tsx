@@ -5,44 +5,76 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Mail, FileText } from "lucide-react";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const LoanInquiryGuide = () => {
   const loanOfficerEmail = "Ziheng.Liu@xpromortgage.com";
-  const emailSubject = "Loan Inquiry(贷款咨询)";
-
-  const emailTemplate = `
+  
+  const emailTemplateEnglish = `
 Hello Nelson,
 
 I'm interested in learning more about my home financing options. Please see my details below.
-(你好，Nelson。我想了解更多关于房屋贷款的信息，以下是我的基本情况。)
 
-Loan & Property Details (贷款和房产信息)
--   Loan Purpose (贷款目的): (e.g., Home purchase/购房, Refinancing/重新贷款)
--   Zip Code (邮政编码):  (e.g., 98005)
--   Estimated Property Value (预估房价): (e.g., $500,000)
--   Property Structure（房产类型）：（e.g., Single Family、独栋, Condo/公寓）
--   Occupancy (房产用途)： （e.g, Primary Residence/自住， Second Home/度假屋， Investment Property/投资）
--   Loan Amount (贷款金额): (e.g., $400,000)
--   Preferred Term (期望贷款年限): (e.g., 30-year fixed/30年固定， 15-year fixed/15年固定， ARM)
+Loan & Property Details
+-   Loan Purpose: (e.g., Home purchase, Refinancing)
+-   Zip Code:  (e.g., 98005)
+-   Estimated Property Value: (e.g., $500,000)
+-   Property Structure: (e.g., Single Family, Condo)
+-   Occupancy: (e.g., Primary Residence, Second Home, Investment Property)
+-   Loan Amount: (e.g., $400,000)
+-   Preferred Term: (e.g., 30-year fixed, 15-year fixed, ARM)
 
-Personal Information (个人信息)
--   Credit Score (信用分数): (e.g., Excellent/优秀, Good/良好, Fair/一般)
--   Residency Status (身份状态): (e.g., Citizen/公民, Permanent Resident/永久居民, Visa/签证)
+Personal Information
+-   Credit Score: (e.g., Excellent, Good, Fair)
+-   Residency Status: (e.g., Citizen, Permanent Resident, Visa)
 
-Additional Details (其他补充)
--   (e.g., I'm a first-time homebuyer/我是首次购房者, I have questions about VA loans/我对VA贷款有疑问, etc.)
+Additional Details
+-   (e.g., I'm a first-time homebuyer, I have questions about VA loans, etc.)
 
-Availability (方便联系的时间)
--   I am available to talk on ________ at ________. (我方便在 __ 时间与你联系)
+Availability
+-   I am available to talk on ________ at ________.
 
 Thank you,
-[Your Name] (您的名字)
+[Your Name]
   `.trim();
 
-  const [scenario, setScenario] = useState(emailTemplate);
+  const emailTemplateChinese = `
+你好, Nelson,
+
+我想了解更多关于房屋贷款的信息，以下是我的基本情况。
+
+贷款和房产信息
+-   贷款目的: (例如, 购房, 重新贷款)
+-   邮政编码: (例如, 98005)
+-   预估房价: (例如, $500,000)
+-   房产类型: (例如, 独栋, 公寓)
+-   房产用途: (例如, 自住, 度假屋, 投资)
+-   贷款金额: (例如, $400,000)
+-   期望贷款年限: (例如, 30年固定, 15年固定, ARM)
+
+个人信息
+-   信用分数: (例如, 优秀, 良好, 一般)
+-   身份状态: (例如, 公民, 永久居民, 签证)
+
+其他补充
+-   (例如, 我是首次购房者, 我对VA贷款有疑问, 等等)
+
+方便联系的时间
+-   我方便在 ________ 的 ________ 与你联系。
+
+谢谢,
+[您的名字]
+  `.trim();
+
+  const [activeTab, setActiveTab] = useState("english");
+  const [englishScenario, setEnglishScenario] = useState(emailTemplateEnglish);
+  const [chineseScenario, setChineseScenario] = useState(emailTemplateChinese);
 
   const handleEmailClick = () => {
-    window.location.href = `mailto:${loanOfficerEmail}?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(scenario)}`;
+    const isChineseTab = activeTab === "chinese";
+    const subject = isChineseTab ? "贷款咨询 (Loan Inquiry)" : "Loan Inquiry (贷款咨询)";
+    const body = isChineseTab ? chineseScenario : englishScenario;
+    window.location.href = `mailto:${loanOfficerEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   };
 
   return (
@@ -50,23 +82,40 @@ Thank you,
       <CardHeader>
         <CardTitle className="font-headline text-3xl flex items-center gap-2">
           <FileText className="h-8 w-8 text-primary" />
-          Same Day Loan Quote 贷款咨询， 当天回复
+          Same Day Loan Quote / 贷款咨询，当天回复
         </CardTitle>
         <CardDescription>
-          Use the template below to structure your email. This will help me understand your needs and provide the best possible advice
-          您可以用下面的邮件模板描述您的贷款需求， 以方便我更好的服务您
+          Use the template below to structure your email. This will help me understand your needs and provide the best possible advice.
+          您可以用下面的邮件模板描述您的贷款需求，以便我更好地为您服务。
         </CardDescription>
       </CardHeader>
       <CardContent>
-        <Textarea 
-          value={scenario}
-          onChange={(e) => setScenario(e.target.value)}
-          className="min-h-[600px] text-sm bg-secondary/50"
-        />
+        <Tabs defaultValue="english" onValueChange={setActiveTab} className="w-full">
+          <TabsList className="grid w-full grid-cols-2">
+            <TabsTrigger value="english">English</TabsTrigger>
+            <TabsTrigger value="chinese">中文 (Chinese)</TabsTrigger>
+          </TabsList>
+          <TabsContent value="english">
+            <Textarea
+              value={englishScenario}
+              onChange={(e) => setEnglishScenario(e.target.value)}
+              className="min-h-[600px] text-sm bg-secondary/50 mt-4"
+              aria-label="English loan inquiry email template"
+            />
+          </TabsContent>
+          <TabsContent value="chinese">
+            <Textarea
+              value={chineseScenario}
+              onChange={(e) => setChineseScenario(e.target.value)}
+              className="min-h-[600px] text-sm bg-secondary/50 mt-4"
+              aria-label="Chinese loan inquiry email template"
+            />
+          </TabsContent>
+        </Tabs>
       </CardContent>
       <CardFooter className="flex flex-col sm:flex-row items-center gap-4">
          <p className="text-xs text-muted-foreground flex-1 text-center sm:text-left">
-            Click the button to open this template in your default email client.
+            Click the button to open the template for the selected language in your email client.
         </p>
         <Button onClick={handleEmailClick} className="w-full sm:w-auto bg-accent hover:bg-accent/90">
             <Mail className="mr-2 h-4 w-4" /> Open in Email
