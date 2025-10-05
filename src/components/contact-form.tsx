@@ -72,7 +72,7 @@ Thank you,
 
   const handleEmailClick = (language: 'english' | 'chinese') => {
     const isChineseTab = language === "chinese";
-    const subject = isChineseTab ? "贷款咨询 (Loan Inquiry)" : "Loan Inquiry (贷款咨询)";
+    const subject = isChineseTab ? "贷款咨询" : "Loan Inquiry";
     const body = isChineseTab ? chineseScenario : englishScenario;
     window.location.href = `mailto:${loanOfficerEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   };
