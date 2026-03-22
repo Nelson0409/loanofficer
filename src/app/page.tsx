@@ -3,6 +3,7 @@ import ContactForm from '@/components/contact-form';
 import FaqSection from '@/components/faq-section';
 import { Separator } from '@/components/ui/separator';
 import MortgageCalculator from '@/components/mortgage-calculator';
+import Chatbot from '@/components/chatbot';
 
 export default function Home() {
   return (
@@ -27,6 +28,8 @@ export default function Home() {
           <p>NMLS #1033790 | Equal Housing Lender</p>
         </div>
       </footer>
+      <Chatbot />
     </div>
   );
 }
+
