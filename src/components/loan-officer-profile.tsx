@@ -51,6 +51,9 @@ const LoanOfficerProfile = () => {
                 <MapPin className="h-5 w-5 text-accent" />
                 <span>11900 NE 1st St,  #300 Bellevue, WA 98005</span>
             </div>
+            <a href="https://www.nmlsconsumeraccess.org/EntityDetails.aspx/COMPANY/1033790" target="_blank" rel="noopener noreferrer" className="block text-center text-xs text-primary hover:underline mt-2">
+                NMLS Consumer Access
+            </a>
         </div>
       </CardContent>
     </Card>
